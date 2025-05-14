@@ -1,0 +1,36 @@
+INPUT:
+
+import random
+
+def predict_disaster(disaster_type):
+    risk = round(random.uniform(0, 1), 2)
+    print(f"{disaster_type} Risk: {risk}")
+    if risk > 0.7:
+        print(f"* ALERT *\n{disaster_type} predicted with risk level {risk}\nTake necessary precautions!\n")
+    else:
+        print(f"{disaster_type} risk is under control.\n")
+
+def main():
+    print("=== Natural Disaster Prediction System ===\n")
+    predict_disaster("Flood")
+    predict_disaster("Earthquake")
+    predict_disaster("Cyclone")
+
+if _name_ == "_main_":
+    main()
+
+OUTPUT:
+=== Natural Disaster Prediction System ===
+
+Flood Risk: 0.84
+* ALERT *
+Flood predicted with risk level 0.84
+Take necessary precautions!
+
+Earthquake Risk: 0.33
+Earthquake risk is under control.
+
+Cyclone Risk: 0.76
+* ALERT *
+Cyclone predicted with risk level 0.76
+Take necessary precautions!
